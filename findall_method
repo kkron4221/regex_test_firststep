@@ -1,0 +1,6 @@
+import re
+
+test = "abcdefgabc"
+
+regex_test = re.compile(r'(?<=abc).*')
+print(regex_test.findall(test))
