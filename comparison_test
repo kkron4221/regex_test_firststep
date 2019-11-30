@@ -1,0 +1,15 @@
+import re
+
+str_test = '''abc
+abc
+--00
+--00'''
+
+regex_greedy = re.compile(r'.*(?=--)',flags=re.DOTALL)
+regex_nongreedy = re.compile(r'.*?(?=--)',flags=re.DOTALL)
+
+ans_greedy = regex_greedy.search(str_test).group()
+ans_nongreedy = regex_nongreedy.search(str_test).group()
+
+print(ans_greedy)
+print(ans_nongreedy)
